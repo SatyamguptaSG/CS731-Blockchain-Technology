@@ -1,0 +1,87 @@
+/* Stylesheet for Home component */
+/* 
+.home-body{
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-repeat:repeat;
+    width: 100%;
+    height: 100vh;
+} */
+.home-container {
+    
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Navbar, Image Grid, Footer */
+    min-height: 100vh;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); /* Responsive grid columns */
+    gap: 2rem; /* Space between image boxes */
+    padding: 1rem;
+  }
+  
+  .image-box {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 30rem; /* Decrease width for smaller screens */
+    height: 30rem; /* Keep height proportional */
+    overflow: hidden; /* Ensure images don't overflow the box */
+    position: relative; /* Ensure position is relative for absolute positioning of overlay */
+    transition: transform 0.3s ease-in-out;
+  }
+
+ 
+  .image-box:hover {
+    transform: translateY(-5px); /* Shift the image box upwards by 5px on hover */
+  }
+
+
+  
+  .image-box img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Use 100% height */
+    object-fit: cover; /* Cover the container without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .image-grid {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Adjust columns for smaller screens */
+    }
+  }
+
+  .search__input-container {
+    border: 0.2rem solid black;
+    position: relative;
+    width: 50%; /* Adjust width as needed */
+    margin: 1rem auto; /* Center horizontally */
+    padding: 8px;
+    border-radius: 2rem;
+    background-color: white;
+  }
+  
+  .search__input {
+    width: 100%;
+    /* height: 2.5rem; */
+    padding-right: 30px; /* Space for the icon */
+    border: none; /* Remove the border */
+    outline: none; /* Remove the outline */
+  }
+  
+  .search__icon {
+    position: absolute;
+    font-size: 1.5rem; 
+    top: 50%;
+    right: 10px; /* Adjust right position as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .image-details{
+   color: white; 
+  }

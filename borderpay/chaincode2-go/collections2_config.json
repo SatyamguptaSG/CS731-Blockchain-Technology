@@ -1,0 +1,26 @@
+[
+ {
+   "name": "Bank_Collections",
+   "policy": "OR('Org1MSP.member', 'Org2MSP.member')",
+   "requiredPeerCount": 1,
+   "maxPeerCount": 6,
+   "blockToLive":0,
+   "memberOnlyRead": true,
+   "memberOnlyWrite": true,
+   "endorsementPolicy": {
+    "signaturePolicy":"OR('Org1MSP.member','Org2MSP.member')"
+  }   
+},
+ {
+   "name": "Transaction_Collections",
+   "policy": "OR('Org1MSP.member', 'Org2MSP.member')",
+   "requiredPeerCount": 1,
+   "maxPeerCount": 6,
+   "blockToLive":0,
+   "memberOnlyRead": true,
+   "memberOnlyWrite": false,
+   "endorsementPolicy": {
+     "signaturePolicy": "OR('Org1MSP.member', 'Org2MSP.member')"
+   }
+ }
+]
